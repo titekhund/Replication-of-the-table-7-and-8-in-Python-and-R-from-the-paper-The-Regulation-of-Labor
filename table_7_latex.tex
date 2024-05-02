@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}   
+\usepackage{pdflscape}  
+\usepackage{tabularx}   
+\usepackage{geometry}   
+\usepackage{siunitx}    
+\usepackage{makecell}   
+
+\geometry{left=1cm, right=1cm, top=1cm, bottom=1cm}  % 
+
+\renewcommand\theadfont{\normalsize}  
+\renewcommand\theadalign{bc}  
+
+\begin{document}
+
+\begin{landscape}
+\begin{table}[ht]
+    \centering
+    \caption{CORRELATIONS BETWEEN REGULATION INDICES}
+    \small 
+    \setlength{\tabcolsep}{5pt} 
+    \begin{tabular}{@{}l*{8}{S[table-format=1.4]}@{}}
+        \toprule
+        & {\thead{Employment\\laws\\index}} & {\thead{Collective\\relations\\laws\\index}} & {\thead{Social\\security\\laws\\index}} & {\thead{Court\\formalism\\index\\for\\eviction\\of a\\nonpaying\\tenant}} & {\thead{Court\\formalism\\index\\for\\collection\\of a\\bounced\\check}} & {\thead{Log\\(number\\of steps\\to start\\a business)}} & {\thead{Log\\(number\\of days\\to start\\a business)}} & {\thead{Log\\(cost to start\\a business/GDP\\per capita)}} \\
+        \midrule
+        Employment laws index & & & & & & & & \\
+        Collective relations laws index & 0.4894*** & & & & & & & \\
+        Social security laws index & 0.2339* & 0.2275* & & & & & & \\
+        Court formalism index for eviction of a nonpaying tenant & 0.3292** & 0.5134*** & 0.1284 & & & & & \\
+        Court formalism index for collection of a bounced check & 0.4103*** & 0.4430*** & 0.0448 & 0.8505*** & & & & \\
+        Log (number of steps to start a business) & 0.3439** & 0.4041*** & -0.2310 & 0.5036*** & 0.5675*** & & & \\
+        Log (number of days to start a business) & 0.3335** & 0.3663*** & -0.2949* & 0.5274*** & 0.5526*** & 0.8263*** & & \\
+        Log (cost to start a business/GDP per capita) & 0.1721 & 0.1721 & -0.4737*** & 0.3667*** & 0.4309*** & 0.6354*** & 0.6147*** & \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:correlation_matrix}
+\end{table}
+\end{landscape}
+
+\end{document}
